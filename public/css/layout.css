@@ -22,6 +22,8 @@
 /* a. General Styles
 /* ------------------------------------------------------------------ */
 
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
 body {
   background: #0f0f0f;
 }
@@ -29,18 +31,97 @@ body {
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
 /* ------------------------------------------------------------------ */
+/* Splash.css */
 
-header {
-  position: relative;
-  height: 800px;
-  min-height: 500px;
-  width: 100%;
-  background: #161415 url(../images/bg1.jpg) no-repeat top center;
-  background-size: cover !important;
-  -webkit-background-size: cover !important;
-  text-align: center;
-  overflow: hidden;
-}
+  .brand {
+    background-color: #2b2b2b;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100vh; /* Make splash screen full height */
+    align-items: center; /* Center content vertically */
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    position: absolute; /* Position it absolutely to overlay the header */
+    top: 0;
+    left: 0;
+    z-index: 110; /* Ensure it is on top */
+  }
+  
+  .brand.enter {
+    opacity: 1;
+  }
+  
+  .brand.exit {
+    opacity: 0;
+  }
+  
+  .brand .overlap-group-wrapper {
+    background-color: #2b2b2b;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .brand .overlap-group {
+    background-image: url(../images/portfolio/logo.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 500px;
+    width: 500px;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .brand .text-wrapper {
+    color: #ffffff;
+    font-family: "Shrikhand", Helvetica;
+    font-size: 84px;
+    font-weight: 400;
+    height: 122px;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    animation: dropIn 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes dropIn {
+    from {
+      top: -100px;
+    }
+    to {
+      top: 60%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  header {
+    position: relative;
+    height: 800px;
+    min-height: 500px;
+    width: 100%;
+    background: #161415 url(../images/bg1.jpg) no-repeat top center;
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    text-align: center;
+    overflow: hidden;
+  }
 
 /* vertically center banner section */
 header:before {
@@ -57,21 +138,44 @@ header .banner {
   padding-bottom: 30px;
   text-align: center;
     /* From https://css.glass */
-    background: rgba(199, 181, 181, 0.21);
+    background: rgba(199, 181, 181, 0.31);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(2.9px);
+    backdrop-filter: blur(5.9px);
     -webkit-backdrop-filter: blur(2.9px);
     border: 1px solid rgba(199, 181, 181, 0.21);
     padding: 5px;
     transition: 0.1s all ease-in;
     transform-style: preserve-3d;
 }
- .banner:hover{
-   cursor: pointer;
-   transform: rotateY(150deg);
-   transform: rotateX(-25deg);
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
 }
+
+
+
+.banner.shine::after {
+  position: absolute;
+  top: 0;
+  left: -85%;
+  z-index: 2;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .8) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, .8)));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .8) 100%);
+  -webkit-transform: skewX(-25deg);
+  -ms-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+  z-index: 1;
+  animation: shine 1s;
+}
+
+
 
 header .banner-text {
   width: 100%;
@@ -163,11 +267,23 @@ header .scrolldown a:hover {
   text-transform: uppercase;
   letter-spacing: 2.5px;
   margin: 0 auto;
+  padding:0 3%;
   z-index: 100;
   position: fixed;
   left: 0;
   top: 0;
 }
+
+
+.nav-logo .text-wrapper-5 {
+  color: #ffffff;
+  font-family: "Shrikhand", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  text-transform:none;
+}
+
+
 .opaque {
   background-color: #333;
 }
@@ -285,6 +401,12 @@ ul#nav li.current a {
   overflow: hidden;
 }
 
+.resume {
+  background: #fff !important;
+  padding-top: 90px !important;
+  padding-bottom: 72px !important;
+  overflow: hidden !important;
+}
 #resume a,
 #resume a:visited {
   color: #11abb0;
@@ -475,6 +597,7 @@ ul#nav li.current a {
   padding-top: 90px;
   padding-bottom: 60px;
 }
+
 #portfolio h1 {
   font: 15px/24px "opensans-semibold", sans-serif;
   text-transform: uppercase;
@@ -486,8 +609,24 @@ ul#nav li.current a {
 
 /* Portfolio Content */
 #portfolio-wrapper .columns {
-  margin-bottom: 36px;
+  margin-bottom: 30px;
 }
+#portfolio-wrapper{
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.portfolio-item{
+  flex:0 0 32%;
+}
+@media only screen and (max-width: 500px) {
+  .portfolio-item{
+    flex:100%;
+  }
+}
+
+
 .portfolio-item .item-wrap {
   background: #fff;
   overflow: hidden;
@@ -862,7 +1001,7 @@ call-to-action .button {
   margin: 0 6px;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
 }
 .flex-control-paging li a {
   width: 12px;

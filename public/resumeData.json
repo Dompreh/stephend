@@ -1,10 +1,10 @@
 {
   "main": {
-    "name": "Stephen Dompreh",
-    "occupation": "Fullstack Developer(Reactjs and Nextjs)",
-    "description": "I like to drink coffee and create wonderful websites for your businesses",
+    "name": "Stephen Asiedu Dompreh",
+    "occupation": "A UI/UX designer & Frontend developer (Figma,Javacript,ReactJs,NextJs).",
+    "description": "I like to solve problems and turn your ideas into code.",
     "image": "profile.png",
-    "bio": "Hi there! I am Stephen! I  am a dedicated and hardworking programmer who not only enjoys but also excels at what he does. I began learning programming four years ago and began my career as a web developer. I have always been in love with the computer and the web and their endless possibilities, with a passion and love for the world of Technology, I didn't hesitate to learn more and push forward to become great at it.I've learned a lot of professional technologies and built a lot of web apps for people and myself over the years. I use cutting-edge technologies to create web apps that are highly performant & optimized",
+    "bio": "Hi there! I am Stephen, experienced in designing(using figma) UI and developing responsive(mobile-first) user friendly  web applications using Javascript,Reactjs or Nextjs.I’m not just a designer and developer,I’m a maestro who turns abstract ideas into captivating digital experiences for individuals and businesses.",
     "contactmessage": "Get in touch with me!",
     "email": "stephenasiedu3654@gmail.com",
     "phone": "+233 548052330",
@@ -18,23 +18,13 @@
     "social": [
       {
         "name": "Twitter",
-        "url": "https://www.twitter.com/stephenasiedu63",
+        "url": "https://www.twitter.com/stephenAD63",
         "className": "fa fa-twitter"
-      },
-      {
-        "name": "facebook",
-        "url": "https://web.facebook.com/profile.php?id=100064153421330",
-        "className": "fa fa-facebook"
       },
       {
         "name": "linkedin",
         "url": "https://www.linkedin.com/in/stephen-asiedu-82a899210/",
         "className": "fa fa-linkedin"
-      },
-      {
-        "name": "instagram",
-        "url": "https://www.instagram.com/iam_dyna_mo/",
-        "className": "fa fa-instagram"
       },
       {
         "name": "github",
@@ -45,56 +35,40 @@
   },
   "resume": {
     "skillmessage": "My Programming Language Proficiency",
-    "education": [
-      {
-        "school": "Ghana Communication Technology University - GH",
-        "degree": "Bachelor's Degree, Computer Science",
-        "graduated": "July 2016",
-        "description": "Graduated"
-      }
-    ],
-    "work": [
-      {
-        "company": "Freelancer",
-        "title": "Frontend Web Developer",
-        "years": "May 2021 - Present",
-        "description": "Creating and helping people to digitalize their business"
-      }
-    ],
     "skills": [
       {
+        "name": "JavaScript",
+        "level": "99%"
+      },
+      {
         "name": "ReactJs",
-        "level": "92%"
+        "level": "90%"
       },
       {
         "name": "NextJs",
-        "level": "95%"
-      },
-      {
-        "name": "Git",
-        "level": "70%"
-      },
-      {
-        "name": "JavaScript",
-        "level": "94%"
-      },
-      {
-        "name": "Web Development",
-        "level": "95%"
+        "level": "90%"
       },
       {
         "name": "Tailwind Css",
-        "level": "97%"
+        "level": "80%"
+      },
+      {
+        "name": "Git",
+        "level": "80%"
+      },
+      {
+        "name": "Express JS",
+        "level": "65%"
       }
     ]
   },
   "portfolio": {
     "projects": [
       {
-        "title": "Amazon Clone (React JS)",
+        "title": "UI/UX Designs on Behace (Figma)",
         "category": "",
-        "image": "amazon.png",
-        "url": "https://amazon-2-0-909217tvl-dompreh.vercel.app/"
+        "image": "behance.png",
+        "url": "https://www.behance.net/stephens1"
       },
       {
         "title": "Syncfusion Dashboard(React JS)",
@@ -112,7 +86,19 @@
         "title": "ExecCourses (HTML, CSS,JS)",
         "category": "",
         "image": "exec.png",
-        "url": "http://www.execcourses.xyz/"
+        "url": "https://execcourses.netlify.app/"
+      },
+     {
+        "title": "Profixer (HTML, CSS,JS)",
+        "category": "",
+        "image": "profixer.png",
+        "url": "https://execcourses.netlify.app/"
+      },
+     {
+        "title": "POS (ReactJS, Tailwind CSS)",
+        "category": "",
+        "image": "POS.png",
+        "url": "https://post-page.netlify.app/"
       }
     ]
   },

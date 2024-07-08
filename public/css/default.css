@@ -87,7 +87,7 @@ pre {
    word-wrap: break-word;
 }
 
-blockquote, q { quotes: &#8220 &#8220; }
+blockquote, q { quotes: #8220 #8220; }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
@@ -597,6 +597,11 @@ input[type="checkbox"] { display: inline; }
    max-width: 1020px;
    margin: 0 auto;
 }
+.row {
+   width: 96%;
+   max-width: 1020px;
+   margin: 0 auto;
+}
 /* fixed width for IE8 */
 .ie .row { width: 1000px ; }
 
@@ -688,7 +693,7 @@ input[type="checkbox"] { display: inline; }
 --------------------------------------------------------------------- */
 .bgrid-sixths [class*="column"]   { width: 16.66667%; }
 .bgrid-quarters [class*="column"] { width: 25%; }
-.bgrid-thirds [class*="column"]   { width: 33.33333%; }
+.bgrid-thirds [class*="column"]   { width: 33.333%; }
 .bgrid-halves [class*="column"]   { width: 50%; }
 
 [class*="bgrid"] [class*="column"] + [class*="column"]:last-child { float: left; }
@@ -707,7 +712,7 @@ properly.
    /* block grids on small screens */
    .s-bgrid-sixths [class*="column"]   { width: 16.66667%; }
    .s-bgrid-quarters [class*="column"] { width: 25%; }
-   .s-bgrid-thirds [class*="column"]   { width: 33.33333%; }
+   .s-bgrid-thirds [class*="column"]   { width: 32%; }
    .s-bgrid-halves [class*="column"]   { width: 50%; }
 
    /* block grids left clearing */
