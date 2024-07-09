@@ -1,3 +1,3 @@
 [build.environment]
   NODE_VERSION = "16.4.0"
-  NPM_VERSION = "8.13.1"  # Ensure you specify an NPM version compatible with your setup
+  NPM_VERSION = "7.18.1"  # Ensure you specify an NPM version compatible with your setup
