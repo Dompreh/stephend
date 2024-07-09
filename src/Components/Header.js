@@ -29,7 +29,7 @@ const Header = ({ data }) => {
     });
   }
 
-  const [text] = useTypewriter({
+  const {text} = useTypewriter({
     words: ['Stephen Asiedu Dompreh'],
     loop: 3,
   });
